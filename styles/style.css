@@ -91,7 +91,7 @@
 }
 
 .header__theme-menu-button:hover {
-    border: 1px solid var(--pink-color-3);
+    border: 1px solid var(--pink-color-2-shadow);
 }
 
 .header__theme-menu-button:focus-visible {
