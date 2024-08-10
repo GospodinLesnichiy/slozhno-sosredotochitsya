@@ -6,3 +6,7 @@
     --color-purple-2: #ff0070;
     --pink-color-2-shadow: rgba(255, 0, 112, 0.4);
 }
+
+.rec {
+    display: block;
+}
