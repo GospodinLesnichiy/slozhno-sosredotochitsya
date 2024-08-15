@@ -1,11 +1,11 @@
 .page {
     background-image: var(--background-image);
-    background-attachment: fixed;
-    background-color: var(--blue-color-1, #000028);
+    background-color: var(--background-color, #000028);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    font-family: var(--main-font);
+    background-attachment: fixed;
+    font-family: var(--main-font), Arial, sans-serif;
     max-width: 1024px;
     min-width: 375px;
     margin: 0 auto;
@@ -22,10 +22,10 @@
     position: absolute;
     width: 25px;
     height: 25px;
+    border-top: 1px solid var(--header-decoration-color);
+    border-right: 1px solid var(--header-decoration-color);
     top: 20px;
     right: 20px;
-    border-top: 1px solid var(--pink-color-2);
-    border-right: 1px solid var(--pink-color-2);
 }
 
 .decorated-zone::after {
@@ -33,10 +33,10 @@
     position: absolute;
     width: 25px;
     height: 25px;
+    border-bottom: 1px solid var(--header-decoration-color);
+    border-left: 1px solid var(--header-decoration-color);
     bottom: 20px;
     left: 20px;
-    border-bottom: 1px solid var(--pink-color-2);
-    border-left: 1px solid var(--pink-color-2);
 }
 
 .header {
@@ -45,11 +45,12 @@
 }
 
 .rec {
+    display: var(--display-rec);
     position: absolute;
+    color: var(--accent-color);
     font-size: 18px;
     top: 20px;
     right: 48px;
-    color: var(--pink-color-2);
 }
 
 .rec::after {
@@ -57,16 +58,16 @@
     position: absolute;
     width: 9px;
     height: 9px;
+    background-color: var(--accent-color);
+    box-shadow: 0 0 5px 3px var(--accent-color);
+    border-radius: 50%;
     top: 8px;
     left: 42px;
-    border-radius: 50%;
-    background-color: var(--pink-color-2);
-    box-shadow: 0 0 5px 3px var(--pink-color-2);
 }
 
 .header__theme-menu-list {
-    display: flex;
     list-style-type: none;
+    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -82,7 +83,7 @@
     font-size: 18px;
     font-weight: normal;
     line-height: 1;
-    color: var(--pink-color-2);
+    color: var(--theme-menu-color);
     text-transform: lowercase;
     cursor: pointer;
     border: none;
@@ -91,37 +92,38 @@
 }
 
 .header__theme-menu-button:hover {
-    border: 1px solid var(--pink-color-2-shadow);
+    border: 1px solid var(--theme-menu-color-transparent);
 }
 
 .header__theme-menu-button:focus-visible {
     outline: none;
-    border-bottom: 1px solid var(--pink-color-2);
+    border-bottom: 1px solid currentColor;
 }
 
 .header__theme-menu-button_active {
     pointer-events: none;
-    border: 1px solid var(--pink-color-2);
+    border: 1px solid var(--theme-menu-color);
 }
 
 .title {
     font-family: inherit;
-    font-size: 18px;
     font-weight: bold;
+    font-size: 18px;
 }
 
 .mainTitle {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    color: var(--purple-color-1, #db00ff);
-    text-shadow: 4px 4px 0 var(--pink-color-2);
+    color: var(--heading-color, #db00ff);
+    text-shadow: 4px 4px 0 var(--accent-color);
+    line-height: 0.8;
     margin: 0;
     justify-self: start;
     align-self: center;
 }
 
 .decoration {
-    background-color: var(--pink-color-2, #ff0070);
-    color: var(--blue-color-1);
+    background-color: var(--accent-color, #ff0070);
+    color: var(--subtitle-text-color);
 }
 
 .subtitle {
@@ -136,33 +138,29 @@
 }
 
 .sectionTitle {
-    color: var(--pink-color-2, #ff0070);
+    color: var(--section-title-color, #ff0070);
     margin: 0;
 }
 
 .text {
-    color: var(--pink-color-1, #f1b2ce);
+    color: var(--text-color, #f1b2ce);
     font-size: 18px;
     margin: 10px 0 0;
 }
 
-.href {
+.link {
     text-decoration: none;
-    color: var(--pink-color-1);
-    text-shadow: 2px 2px 0 var(--pink-color-2);
+    color: var(--text-color);
+    text-shadow: 2px 2px 0 var(--accent-color);
 }
 
-.articleTitle {
-    margin: 0;
+.link:hover {
+    border-bottom: 1px solid var(--text-color)
 }
 
-.href:hover {
-    text-decoration: underline;
-}
-
-.href:focus-visible {
+.link:focus-visible {
     outline: none;
-    border: 1px solid var(--pink-color-1);
+    border: 1px solid var(--text-color);
 }
 
 .section {
@@ -241,6 +239,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    block-size: max(100vb, 668px);
 }
 
 @media (orientation: portrait) {

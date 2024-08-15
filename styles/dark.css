@@ -1,12 +1,8 @@
 .page.theme_dark {
-    --main-font: 'IBM Plex mono';
-    --color-black-1: #000028;
-    --color-purple-1: #db00ff;
-    --color-pink-2: #f1b2ce;
-    --color-purple-2: #ff0070;
-    --pink-color-2-shadow: rgba(255, 0, 112, 0.4);
-}
-
-.rec {
-    display: block;
+    --background-color: #000028;
+    --heading-color: #DB00FF;
+    --text-color: #F1B2CE;
+    --accent-color: #ff0070;
+    --accent-color-transparent: rgba(255, 0, 112, 0.4);
+    --display-rec: flex;
 }
