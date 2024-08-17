@@ -182,7 +182,7 @@
 }
 
 .articleWhy,
-.articleHow {
+.article {
     grid-column: span 2;
 }
 
@@ -263,7 +263,7 @@
         grid-column: span 1;
     }
 
-    .articleWhat {
+    .article {
         grid-column: span 3;
     }
 }
