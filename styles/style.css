@@ -269,6 +269,7 @@
 }
 
 @media (max-width: 767px) {
+
     .why,
     .how {
         grid-template-columns: 1fr;
@@ -278,6 +279,10 @@
     .howTitle {
         width: 100%;
         grid-row: span 1;
+    }
+
+    .header .subtitle {
+        margin-top: -10px;
     }
 }
 
@@ -301,19 +306,21 @@
     }
 
     .rec {
-        display: none;
+        display: var(--display-rec);
     }
 
     .mainTitle {
         font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
         justify-self: center;
+        margin: 14px 10px;
+        line-height: 0.84
     }
 
     .subtitle {
         max-width: 100%;
         justify-self: center;
         align-self: center;
-        margin: 0 10px;
+        margin: 13px 10px;
     }
 
     .main {
