@@ -1,8 +1,27 @@
 .page.theme_dark {
+    --background-image: url(../images/cover-image-dark.png);
     --background-color: #000028;
-    --heading-color: #DB00FF;
+    --accent-color: #FF0070;
+    --font-color: #000028;
+    --font-color-title: #FF0070;
     --text-color: #F1B2CE;
-    --accent-color: #ff0070;
-    --accent-color-transparent: rgba(255, 0, 112, 0.4);
-    --display-rec: flex;
+    --font-color-menu: #FF0070;
+    --font-color-menu-hover: #FF007066;
+    --title-color: #DB00FF;
+    --title-decor-color: #FF0070;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-image: url(../images/cover-image-dark.png);
+        --background-color: #000028;
+        --accent-color: #FF0070;
+        --font-color: #000028;
+        --font-color-title: #FF0070;
+        --text-color: #F1B2CE;
+        --font-color-menu: #FF0070;
+        --font-color-menu-hover: #FF007066;
+        --title-color: #DB00FF;
+        --title-decor-color: #FF0070;
+    }
 }
