@@ -3,7 +3,7 @@
     background-color: var(--background-color, #000028);
     block-size: auto;
     background-size: cover;
-
+    background-position: center;
     background-attachment: fixed;
 }
 
@@ -80,6 +80,7 @@
     background-color: transparent;
     cursor: pointer;
     border: none;
+    text-transform: lowercase;
 }
 
 .header__theme-menu-button_active {
@@ -193,7 +194,7 @@
 }
 
 .whyHow .text {
-    margin-top: var(--block_text-margin-top);
+    padding-top: var(--block_text-padding-top);
 }
 
 .whyHow .article {
@@ -259,24 +260,23 @@ section:nth-of-type(3) .subtitle {
     text-shadow: 1px 1px 0 var(--title-decor-color);
 }
 
-.main_link {
+.link {
     color: var(--text-color);
     text-decoration: none;
 }
 
-.main_link:focus {
+.link:focus {
     outline: none;
 }
 
-.main_link:hover {
+.link:hover {
     border-bottom: 1px solid;
     text-decoration-color: var(--text-color);
 }
 
-.main_link:focus-visible {
+.link:focus-visible {
     border-bottom: currentColor;
     outline: 1px solid var(--text-color);
-    padding: 1px 5px;
 }
 
 .picturesBlock {
@@ -518,7 +518,7 @@ section:nth-of-type(3) .subtitle {
         margin-right: 0;
     }
 
-    .main_link {
+    .link {
         text-decoration: underline;
     }
 
